@@ -25,4 +25,9 @@ public class apiController {
         dataSet.setTimeStamp(LocalDateTime.now());
         dataSetEntryService.saveEntry(dataSet);
     }
+
+    @GetMapping("/length")
+    public int getLength() {
+        return dataSetEntryService.getAll().size();
+    }
 }
